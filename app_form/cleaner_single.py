@@ -2,6 +2,19 @@ import re
 
 #Removes non-alphabetic characters:
 def text_strip_single(row):
+    """
+    Regex based text strip for a sentence
+
+
+    argument:
+    row: str
+    a sentence
+
+    returns:
+    str: cleaned up sentence fit for tokenization
+
+    This has been taken from: https://www.kaggle.com/sandeepbhogaraju/text-summarization-with-seq2seq-model
+    """
         
     #ORDER OF REGEX IS VERY VERY IMPORTANT!!!!!!
     
