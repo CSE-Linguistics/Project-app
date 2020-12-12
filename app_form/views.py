@@ -1,3 +1,4 @@
+"This file has the view needed for the form"
 from django.shortcuts import render
 from .forms import AppForm
 from .bart_handler import summary_bart

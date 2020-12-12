@@ -1,3 +1,4 @@
+"This file has the handler function for seq2seq model"
 import numpy as np
 import tensorflow as tf
 from keras.preprocessing.sequence import pad_sequences
@@ -23,12 +24,16 @@ def get_summary_abstractive(Text:str):
     """
     The given function builds the decoder after sharing some weights with the encoder.
     After building the decoder, this would generate the summary.
+
     Arguments:
+    ----------
     Text: str
-    The text to be summarized
-    Output:
+        The text to be summarized
+
+    Returns:
+    --------
     str
-    The summary
+        The summary as a string
     """
     # Load both the tokenizers from files
     with open(os.path.join(MODEL_PATH,'x_tokenizer.pickle'), 'rb') as handle:

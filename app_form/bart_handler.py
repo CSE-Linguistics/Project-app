@@ -1,3 +1,6 @@
+"""
+This file has the handler function for BART
+"""
 from transformers import AutoTokenizer, AutoModel, pipeline
 import torch
 def summary_bart(sentence:str):
@@ -5,11 +8,14 @@ def summary_bart(sentence:str):
     This would generate the summary using the pretrained BART summarizer
 
     arguments:
+    -----------
     sentence: str 
-    The sentences that need to be summarized
+        The sentences that need to be summarized
 
-    output:
-    the summary as an str
+    Returns:
+    --------
+    str
+        the summary as an string
     """
     tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
     model = AutoModel.from_pretrained("facebook/bart-large-cnn")

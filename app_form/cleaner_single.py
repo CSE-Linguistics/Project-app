@@ -1,3 +1,4 @@
+"""This file has the function needed to clean up sentences so that the words in the sentences can be used to be tokenized"""
 import re
 
 #Removes non-alphabetic characters:
@@ -6,12 +7,15 @@ def text_strip_single(row):
     Regex based text strip for a sentence
 
 
-    argument:
+    Arguments:
+    ----------
     row: str
-    a sentence
+        a sentence
 
-    returns:
-    str: cleaned up sentence fit for tokenization
+    Returns:
+    --------
+    str
+        Cleaned up sentence fit for tokenization
 
     This has been taken from: https://www.kaggle.com/sandeepbhogaraju/text-summarization-with-seq2seq-model
     """

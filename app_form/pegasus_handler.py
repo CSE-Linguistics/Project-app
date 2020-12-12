@@ -1,3 +1,4 @@
+"This file has the handler function for Pegasus"
 from transformers import PegasusForConditionalGeneration, PegasusTokenizer, pipeline
 import torch
 
@@ -5,12 +6,15 @@ def summary_pegasus(sentence:str):
     """
     This would generate the summary using the pretrained pegasus abstractive summarizer
 
-    arguments:
+    Arguments:
+    ----------
     sentence: str 
-    The sentences that need to be summarized
+        The sentences that need to be summarized
 
-    output:
-    the summary as an str
+    Returns:
+    --------
+    str
+        the summary as an string
     """
     model_name = 'google/pegasus-xsum'
     torch_device = 'cuda' if torch.cuda.is_available() else 'cpu'

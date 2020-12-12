@@ -1,3 +1,4 @@
+"This file has the form defined"
 from django import forms
 from .choices import MODEL_CHOICES
 
