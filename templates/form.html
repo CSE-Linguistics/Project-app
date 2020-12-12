@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<style>
+  #newpara{
+    display: none;
+  }
+</style>
+<script>
+  function seeLoading() {
+  var p = document.getElementById("newpara");
+  p.style.display = "block";  	 
+}
+</script>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary" onclick = "seeLoading()">Submit</button>
+  </form>
+  <div id = "newpara" > 
+    Loading...<br>
+  </div>
+  <h3>Summary</h3><br>
+  {{ otpt }}
+{% endblock %}
