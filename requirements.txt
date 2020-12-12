@@ -10,3 +10,6 @@ sentencepiece
 neuralcoref
 bert-extractive-summarizer
 transformers
+rouge-score
+matplolib
+sklearn
