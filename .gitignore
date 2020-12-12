@@ -137,5 +137,11 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# models director
+# models directory
 models/
+
+#sentencepiece files
+sentencepiece/
+
+#vscode
+.vscode/
